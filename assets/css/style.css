@@ -444,10 +444,22 @@ video {
 .grid {
   display: grid;
 }
+.aspect-landscape {
+  aspect-ratio: 3 / 2;
+}
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
 .h-full {
   height: 100%;
 }
+.h-\[100vh\] {
+  height: 100vh;
+}
 .max-h-screen {
+  max-height: 100vh;
+}
+.max-h-\[100vh\] {
   max-height: 100vh;
 }
 .min-h-\[100vh\] {
@@ -607,6 +619,12 @@ video {
 }
 .pr-0 {
   padding-right: 0px;
+}
+.pl-5p {
+  padding-left: 5%;
+}
+.pl-10p {
+  padding-left: 10%;
 }
 .text-left {
   text-align: left;
