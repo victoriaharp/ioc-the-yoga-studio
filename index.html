@@ -10,16 +10,16 @@ banner-subheading:
 
 <!-- index grid -->
 
-<section class="bg-orange grid grid-cols-2 items-center gap-[1px] border-t border-b border-orange">
+<section class="bg-orange grid md:grid-cols-2 items-center gap-[1px] border-t border-b border-orange">
     <!-- first row -->
-    <div class="text-orange bg-beige min-h-screen p-10p flex items-end">
+    <div class="text-orange bg-beige md:min-h-screen p-10p flex md:items-end">
         <div class="pr-5p">
             <h2 class="editable font-oranienbaum text-4xl tracking-widest">Duis Aute Irure</h2>
             <p class="font-poppins editable pb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, reprehenderit provident! Autem temporibus a quo placeat sed dolorem incidunt quidem quas quod, minima nihil facilis ducimus, expedita fuga eaque architecto.</p>
             <a href="#" class="bg-orange text-white font-poppins px-5 py-1 uppercase">Sign Up</a>
         </div>
     </div>
-    <img src="/images/yoga2.jpg" class="object-cover object-top inset-0 w-full h-full max-h-screen" style="object-position: 50% 50%;">
+    <img src="/images/yoga2.jpg" class="object-cover object-top inset-0 w-full h-full max-h-screen hidden md:block" style="object-position: 50% 50%;">
 
     <!-- second row -->
     <div class="flex items-end min-h-screen bg-cover bg-center inset-0 w-full h-full" style="background-image: url(/images/yoga3.jpg); background-position: 50% 40%;">
@@ -30,9 +30,9 @@ banner-subheading:
         </div>
         
     </div>
-    <div class="grid grid-cols-2 gap-[1px] bg-orange min-h-screen">
+    <div class="grid grid-cols-2 gap-[1px] bg-orange md:min-h-screen">
         {% for item in site.data.classes %}
-        <div class="flex items-end bg-beige">
+        <div class="flex md:items-end bg-beige">
             <div class=" text-orange p-5p">
                 <h3 class="font-oranienbaum text-xl tracking-widest">{{item.name}}</h3>
                 <p class="font-poppins">{{item.description}}</p>

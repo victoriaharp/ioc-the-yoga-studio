@@ -438,9 +438,6 @@ video {
 .mt-3 {
   margin-top: 0.75rem;
 }
-.ml-auto {
-  margin-left: auto;
-}
 .ml-5p {
   margin-left: 5%;
 }
@@ -464,6 +461,12 @@ video {
 }
 .grid {
   display: grid;
+}
+.hidden {
+  display: none;
+}
+.aspect-square {
+  aspect-ratio: 1 / 1;
 }
 .h-full {
   height: 100%;
@@ -498,12 +501,18 @@ video {
 .basis-30p {
   flex-basis: 30%;
 }
+.basis-60p {
+  flex-basis: 60%;
+}
+.basis-90p {
+  flex-basis: 90%;
+}
 .break-inside-avoid {
   -moz-column-break-inside: avoid;
        break-inside: avoid;
 }
-.grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -519,9 +528,6 @@ video {
 }
 .items-center {
   align-items: center;
-}
-.justify-end {
-  justify-content: flex-end;
 }
 .justify-center {
   justify-content: center;
@@ -611,6 +617,9 @@ video {
 .p-10p {
   padding: 10%;
 }
+.p-2 {
+  padding: 0.5rem;
+}
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -618,10 +627,6 @@ video {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-}
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 .py-2 {
   padding-top: 0.5rem;
@@ -872,38 +877,188 @@ img{
   @apply bg-beige;
 }
 .hkEhZv .momence-select-button */
+
+
+/* hamburger menu styles */
+
+.burger-button {
+  position:fixed;
+  top: 2vh;
+  right: 2vh;
+  z-index: 90;
+  padding: 8px;
+}
+/*this is where you can change the color of the buttons*/
+.burger-button span{
+  width: 40px;
+  border: 2px solid var(--momence-primary-500);
+  background-color: #C97324;
+  display: block;
+  border-radius: 22px;
+  transition: 2s;
+}
+.burger-button.active span {
+  --tw-border-opacity: 1;
+  border-color: rgb(201 115 36 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(201 115 36 / var(--tw-bg-opacity));
+}
+
+.burger-top, .burger-bottom{
+  position: absolute;
+}
+
+.burger-top{
+  top: -02px;
+}
+
+.burger-bottom{
+  bottom: -02px;
+}
+/* make sure this has the same top as the burger button has padding*/
+.burger-button.active .burger-top{
+  position: absolute;
+  top: 8px;
+  transform: rotateZ(45deg);
+}
+
+.burger-button.active .burger-middle{
+  transform: rotateZ(2700deg);
+  border-color: rgba(0,0,0,0);
+  background-color:rgba(0,0,0,0);
+}
+
+/* make sure this has the same bottom as the burger button has padding*/
+
+.burger-button.active .burger-bottom{
+  position: absolute;
+  bottom: 8px;
+  transform: rotateZ(-45deg);
+}
+
+.burger-menu {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 242 233 / var(--tw-bg-opacity));
+    display: flex;
+    position: fixed;
+    top: 0vh;
+    left:100vw;
+    right: -100vw;
+    bottom: 0vh;
+    padding:5px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    z-index: 80;
+    transition:1s;
+    align-content:space-around;
+  justify-content:space-around;
+  flex-direction:column;
+}
+.burger-menu.active{
+  left:50vw;
+  right:0;
+}
+.burger-menu a {
+  --tw-text-opacity: 1;
+  color: rgb(201 115 36 / var(--tw-text-opacity));
+  text-decoration: none;
+  font-size: 20px;
+  display:block;
+  padding:5px 15px;
+  text-align:center;
+  white-space:nowrap;
+}
+
+/* 
+*{
+  animation: spin 1s linear infinite alternate;
+}
+
+
+@keyframes spin {
+  from {transform: rotate(-.5deg);}
+  to   {transform: rotate(.5deg);}
+} */
+
 .placeholder\:text-orange::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(201 115 36 / var(--tw-text-opacity));
 }
+
 .placeholder\:text-orange::placeholder {
   --tw-text-opacity: 1;
   color: rgb(201 115 36 / var(--tw-text-opacity));
 }
+
 .last\:pr-0:last-child {
   padding-right: 0px;
 }
+
 .hover\:border-white:hover {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
+
 .hover\:border-orange:hover {
   --tw-border-opacity: 1;
   border-color: rgb(201 115 36 / var(--tw-border-opacity));
 }
+
 .hover\:bg-orange:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(201 115 36 / var(--tw-bg-opacity));
 }
+
 .hover\:bg-beige:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(251 242 233 / var(--tw-bg-opacity));
 }
+
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
 .hover\:text-orange:hover {
   --tw-text-opacity: 1;
   color: rgb(201 115 36 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .md\:ml-auto {
+    margin-left: auto;
+  }
+  .md\:block {
+    display: block;
+  }
+  .md\:hidden {
+    display: none;
+  }
+  .md\:min-h-screen {
+    min-height: 100vh;
+  }
+  .md\:basis-30p {
+    flex-basis: 30%;
+  }
+  .md\:basis-45p {
+    flex-basis: 45%;
+  }
+  .md\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .md\:items-end {
+    align-items: flex-end;
+  }
+  .md\:justify-end {
+    justify-content: flex-end;
+  }
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .md\:text-right {
+    text-align: right;
+  }
 }
