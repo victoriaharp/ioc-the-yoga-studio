@@ -25,6 +25,8 @@ module.exports = {
     fontFamily: {
       'sans': ['Roboto', 'sans-serif'],
       'serif': ['proxima-nova-condensed', 'ui-sans-serif'],
+      'oranienbaum': ['Oranienbaum', 'serif'],
+      'poppins': ['Poppins', 'sans-serif'],
     },
     extend: {
       lineHeight: {
@@ -36,7 +38,12 @@ module.exports = {
         '5p': '5%',
         '10p': '10%',
         '15p': '15%',
-        '75p': '75%',
+        '20p': '20%',
+        '30p': '30%',
+        '45p': '45%',
+        '50p': '50%',
+        '60p': '60%',
+        '90p': '90%',
       },
       aspectRatio: {
         '5/3': '5 / 3',
@@ -49,6 +56,18 @@ module.exports = {
         '60': '60vh',
         '50': '50vh',
       },
+      maxHeight:{
+        '100': '100vh',
+        '90': '90vh',
+        '80': '80vh',
+        '70': '70vh',
+        '60': '60vh',
+        '50': '50vh',
+        '40': '40vh',
+        '30': '30vh',
+        '20': '20vh',
+        '10': '10vh',
+      },
 
       maxWidth:{
         '50': '50%',
@@ -59,6 +78,12 @@ module.exports = {
         'landscape': '3 / 2',
         'portrait-tall': '5/8',
         'portrait': '4/5',
+        '5/3': '5 / 3',
+      },
+      
+      colors: {
+        'orange': '#C97324',
+        'beige': '#FBF2E9',
       },
     },
   },
