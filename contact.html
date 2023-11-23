@@ -1,0 +1,29 @@
+---
+layout: default
+header-image: /images/yoga9.jpg
+background-position: 42% 83%
+banner-supheading: 
+banner-heading: Get In Touch
+banner-subheading:
+---
+
+{% include split-banner.html %}
+
+<section class=" bg-beige min-h-screen flex items-center">
+    <div class=" mx-auto w-[60%]">
+        <form action="#" method="post" id="contactForm" class="">
+
+            <input type="text" id="name" name="name" placeholder="NAME" required class="w-full bg-beige  border-b border-orange text-orange placeholder:text-orange mb-10">
+                <br>
+
+            <input type="email" id="email" name="email" placeholder="EMAIL" required class="w-full bg-beige border-b border-orange text-orange placeholder:text-orange mb-10" >
+    
+            <label for="message" class="uppercase block text-orange">Message:</label>
+            <textarea id="message" name="message" rows="4" required class="w-full block bg-beige border border-orange text-orange"></textarea>
+            
+            <div class="text-right">
+                <button type="submit" class="text-beige bg-orange border-orange hover:text-orange hover:bg-beige hover:border-orange transition border px-10 py-1 mt-5 uppercase">Send</button>
+            </div>
+        </form>
+    </div>
+</section>

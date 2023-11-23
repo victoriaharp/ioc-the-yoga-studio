@@ -12,18 +12,31 @@
 html {
   scroll-behavior: smooth; /* this enables smooth scrolling between internal links */
 }
-
+/* to override the momence purple color, we have to override their color variable here */
+:root{
+  --momence-primary-050: theme(colors.orange.50);
+  --momence-primary-900: theme(colors.orange.900);
+  --momence-primary-800: theme(colors.orange.800);
+  --momence-primary-700: theme(colors.orange.700);
+  --momence-primary-600: theme(colors.orange.600);
+  --momence-primary-500: theme(colors.orange.500);
+  --momence-primary-400: theme(colors.orange.400);
+  --momence-primary-300: theme(colors.orange.300);
+  --momence-primary-200: theme(colors.orange.200);
+  --momence-primary-100: theme(colors.orange.100);
+}
 h1, h2, h3, h4, h5 {
   line-height: 1;
   font-weight: 800;
   margin-bottom: 1em;
 }
 
-
+hr{
+width: calc(10vw + 10.2rem);
+}
 
 input, textarea{
   margin-bottom: 1rem;
-  color: black;
 }
 
 p{
@@ -41,10 +54,33 @@ img{
   max-width: 100%;
 }
 
+
+/* remove corners */
+#momence-embed #momence-plugin-host-schedule * {
+  @apply rounded-none font-poppins border-orange text-orange;
+}
+/* changing the class title font */
+#momence-embed #momence-plugin-host-schedule h4 {
+  @apply font-oranienbaum;
+}
+/* hiding images */
+#momence-embed #momence-plugin-host-schedule .momence-host_schedule-session_list-item-image.jQbyba{
+  display: none;
+}
+/* border between each description and price */
+#momence-embed #momence-plugin-host-schedule .kllAKy {
+  @apply hidden ;
+}
+#momence-embed #momence-plugin-host-schedule .EenGE{
+  @apply text-white hover:text-white;
+}
+
 @layer utilities{
   .rotate-text-180{
     writing-mode: vertical-lr;
     text-orientation: mixed;
     @apply rotate-180;
   }
+
+  
 }

@@ -4,17 +4,9 @@ header-image: /images/yoga1.jpg
 banner-supheading: Welcome to
 banner-heading: The Yoga Studio
 banner-subheading:
-classes:
-  - name: Bikram Hot Yoga
-    description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, reprehenderit provident!
-  - name: Mandala Yoga
-    description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, reprehenderit provident!
-  - name: Chakra Flow
-    description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, reprehenderit provident!
-  - name: Vinyasa Yoga
-    description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, reprehenderit provident!
 ---
-<!-- default includes nav and header banner -->
+
+{% include header-banner.html %}
 
 <!-- index grid -->
 
@@ -22,27 +14,27 @@ classes:
     <!-- first row -->
     <div class="text-orange bg-beige min-h-screen p-10p flex items-end">
         <div class="pr-5p">
-            <h2 class="editable font-oranienbaum text-4xl pb-5">Duis Aute Irure</h2>
+            <h2 class="editable font-oranienbaum text-4xl tracking-widest">Duis Aute Irure</h2>
             <p class="font-poppins editable pb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, reprehenderit provident! Autem temporibus a quo placeat sed dolorem incidunt quidem quas quod, minima nihil facilis ducimus, expedita fuga eaque architecto.</p>
-            <a href="#" class="bg-orange text-white font-poppins px-5 py-1">Sign Up</a>
+            <a href="#" class="bg-orange text-white font-poppins px-5 py-1 uppercase">Sign Up</a>
         </div>
     </div>
-    <img src="/images/yoga2.jpg" class="object-cover object-top inset-0 w-full h-full max-h-screen">
+    <img src="/images/yoga2.jpg" class="object-cover object-top inset-0 w-full h-full max-h-screen" style="object-position: 50% 50%;">
 
     <!-- second row -->
-    <div class="flex items-end min-h-screen bg-cover bg-center inset-0 w-full h-full" style="background-image: url(/images/yoga3.jpg);">
+    <div class="flex items-end min-h-screen bg-cover bg-center inset-0 w-full h-full" style="background-image: url(/images/yoga3.jpg); background-position: 50% 40%;">
         <div class="p-10p">
-            <h3 class="editable font-oranienbaum text-4xl text-white pb-5">Our Classes</h3>
+            <h3 class="editable font-oranienbaum text-4xl text-white tracking-widest">Our Classes</h3>
             <p class="font-poppins editable text-white pb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus rem magnam molestiae quisquam distinctio magni tempore, eveniet libero. Labore accusamus non optio porro placeat numquam fuga totam minima perspiciatis harum.</p>
-            <a href="#" class="bg-orange text-white font-poppins px-5 py-1">Find Out More</a>
+            <a href="#" class="bg-orange text-white font-poppins px-5 py-1 uppercase tracking-widest">Find Out More</a>
         </div>
         
     </div>
     <div class="grid grid-cols-2 gap-[1px] bg-orange min-h-screen">
-        {% for item in page.classes %}
+        {% for item in site.data.classes %}
         <div class="flex items-end bg-beige">
             <div class=" text-orange p-5p">
-                <h3 class="font-oranienbaum text-xl">{{item.name}}</h3>
+                <h3 class="font-oranienbaum text-xl tracking-widest">{{item.name}}</h3>
                 <p class="font-poppins">{{item.description}}</p>
             </div>
         </div>
@@ -55,7 +47,7 @@ classes:
 
 <!-- Testimonials section -->
 <section class="p-5p bg-beige">
-    <h2 class="font-oranienbaum text-4xl text-orange pb-5p">Testimonials</h2>
+    <h2 class="font-oranienbaum text-4xl text-orange tracking-widest">Testimonials</h2>
     <div class="flex flex-nowrap gap-5 mx-auto overflow-x-scroll pl-1 pr-0 relative">
         {% for item in site.data.testimonials %}
 
