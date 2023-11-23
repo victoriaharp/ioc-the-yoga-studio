@@ -24,6 +24,8 @@ html {
   --momence-primary-300: theme(colors.orange.300);
   --momence-primary-200: theme(colors.orange.200);
   --momence-primary-100: theme(colors.orange.100);
+  --momence-background: transparent;
+  --momence-white: transparent;
 }
 h1, h2, h3, h4, h5 {
   line-height: 1;
@@ -71,10 +73,63 @@ img{
 #momence-embed #momence-plugin-host-schedule .kllAKy {
   @apply hidden ;
 }
+/* buttons */
 #momence-embed #momence-plugin-host-schedule .EenGE{
   @apply text-white hover:text-white;
 }
+/* remove name */
+#momence-embed #momence-plugin-host-schedule .eyVeLy.momence-host_schedule-session_list-item-info.momence-session-teacher{
+  display: none;
+}
+/* remove text */
+#momence-embed #momence-plugin-host-schedule .kJTgQj.momence-host_schedule-session_list-item-description{
+  display: none;
+}
+/* remove class */
+#momence-embed #momence-plugin-host-schedule .igpvGC.momence-host_schedule-session_list-item-type{
+  display: none;
+}
+/* remove bottom text */
+#momence-embed #momence-plugin-host-schedule .brZsCM.momence-host_schedule-powered_by_momence{
+  display: none;
+}
+/* remove time zone */
+#momence-embed #momence-plugin-host-schedule .kSZlqf.momence-host_schedule-sys_row{
+  display: none;
+}
+/* removing borders from next and prev buttons */
+#momence-embed #momence-plugin-host-schedule .momence-button{
+    border: none;
+}
+/* remove underline from classes */
+#momence-embed #momence-plugin-host-schedule .momence-event_type_select-button .kZOxIB{
+  display: none;
+}
+#momence-embed #momence-plugin-host-schedule .henUQy.momence-event_type_select-button{
+  @apply font-oranienbaum text-4xl pb-5;
+}
+/* #momence-embed #momence-plugin-host-schedule .cJpMNz{
+  @apply bg-orange;
+} */
 
+/* #momence-embed #momence-plugin-host-schedule .dImvNj{
+  @apply bg-beige;
+}
+
+#momence-embed #momence-plugin-host-schedule .gfbZfI{
+  @apply bg-beige;
+}
+
+#momence-embed #momence-plugin-host-schedule .iIHip{
+  @apply bg-beige;
+}
+#momence-embed #momence-plugin-host-schedule .caXlZz{
+  @apply bg-beige;
+}
+#momence-embed #momence-plugin-host-schedule .henUQy{
+  @apply bg-beige;
+}
+.hkEhZv .momence-select-button */
 @layer utilities{
   .rotate-text-180{
     writing-mode: vertical-lr;
