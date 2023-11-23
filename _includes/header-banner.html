@@ -1,19 +1,6 @@
 <section class="flex flex-col h-[100vh] bg-cover bg-center relative" style="background-image: url({{page.header-image}});">
 
-    <nav class="flex items-center justify-between text-orange pl-5p mt-5">
-
-        <div class="">
-            <a href="/index" class="font-oranienbaum text-3xl border-b border-transparent">The Yoga Studio</a>
-        </div>
-
-        <div class="font-poppins grow uppercase text-right space-x-2 ">
-
-            {% for item in site.data.nav %}
-            <a href="{{item.link}}" class="text-left inline-block px-5p ">{{item.name}}</a>
-            {% endfor %}
-
-        </div>
-    </nav>
+    {% include header-nav.html %}
 
     <div class="flex grow items-center p-10p">
         <div class="max-w-2xl">

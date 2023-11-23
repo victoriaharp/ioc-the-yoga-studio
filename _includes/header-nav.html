@@ -1,0 +1,14 @@
+<nav class="flex items-center justify-between text-orange pl-5p mt-5">
+
+    <div class="">
+        <a href="/index" class="font-oranienbaum text-3xl border-b border-transparent">The Yoga Studio</a>
+    </div>
+
+    <div class="font-poppins grow uppercase text-right space-x-2 ">
+
+        {% for item in site.data.nav %}
+        <a href="{{item.link}}" class="text-left inline-block px-5p ">{{item.name}}</a>
+        {% endfor %}
+
+    </div>
+</nav>
